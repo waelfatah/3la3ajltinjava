@@ -1,0 +1,15 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+@font-face {
+    font-family: 'Erostile';
+    src: url('EurostileExtendedBlack.ttf');
+}
+
+.label{
+    -fx-font-family: "Eurostile";
+}

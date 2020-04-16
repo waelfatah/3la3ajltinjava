@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="gridPane" prefHeight="241.0" prefWidth="1055.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fx:id="urlImage" fitHeight="195.0" fitWidth="162.0" layoutX="26.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" />
+      <Separator layoutX="214.0" layoutY="19.0" orientation="VERTICAL" prefHeight="195.0" prefWidth="0.0" />
+      <Label fx:id="nomProduit" layoutX="230.0" layoutY="34.0" prefHeight="49.0" prefWidth="182.0" text="Nom Produit" textFill="#3b3b3c">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Label fx:id="marque" layoutX="230.0" layoutY="83.0" prefHeight="40.0" prefWidth="182.0" text="Marque" textFill="#f26722">
+         <font>
+            <Font name="Arial" size="28.0" />
+         </font>
+      </Label>
+      <Label fx:id="quantite" layoutX="230.0" layoutY="154.0" prefHeight="40.0" prefWidth="297.0" text="Quantite">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font></Label>
+      <Label fx:id="prix" layoutX="886.0" layoutY="65.0" prefHeight="40.0" prefWidth="113.0" text="Prix" textAlignment="RIGHT" textFill="RED">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="buyButton" layoutX="780.0" layoutY="126.0" mnemonicParsing="false" onAction="#addProductToCart" onMouseEntered="#changeColorBuy" onMouseExited="#remainColorBuy" prefHeight="55.0" prefWidth="219.0" style="-fx-background-color: #3b3b3c;" text="Ajouter au panier" textAlignment="RIGHT" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="43.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/panierblanc.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

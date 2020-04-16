@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="661.0" prefWidth="958.0" style="-fx-background-color: #3b3b3c;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.la3ajltin.tests.DisplayProductController">
+    <stylesheets>
+        <URL value="@displayproduct.css" />
+    </stylesheets>
+   <children>
+      <ScrollPane layoutX="165.0" layoutY="14.0" prefHeight="618.0" prefWidth="667.0">
+         <content>
+            <AnchorPane prefHeight="603.0" prefWidth="659.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+               <children>
+                  <Label layoutX="34.0" layoutY="28.0" prefHeight="53.0" prefWidth="312.0" text="Afficher Produit" textFill="#f27131">
+                     <font>
+                        <Font name="Arial Black" size="30.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="ajouter" layoutX="178.0" layoutY="510.0" mnemonicParsing="false" onMouseClicked="#Add" prefHeight="62.0" prefWidth="63.0" style="-fx-background-color: #2f3942;" text="+" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Black" size="25.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="supprimer" layoutX="298.0" layoutY="510.0" mnemonicParsing="false" onMouseClicked="#DeleteProd" prefHeight="62.0" prefWidth="63.0" style="-fx-background-color: #2f3942;" text="-" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Black" size="25.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="refresh" layoutX="419.0" layoutY="510.0" mnemonicParsing="false" onAction="#Refresh" prefHeight="62.0" prefWidth="63.0" style="-fx-background-color: #2f3942;" text="⭮" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Button>
+                  <TableView fx:id="tableProduit" layoutX="21.0" layoutY="114.0" prefHeight="376.0" prefWidth="618.0" style="-fx-background-radius: 10;" stylesheets="@tableview.css">
+                     <columns>
+                        <TableColumn fx:id="col_id_produit" prefWidth="75.0" style="-fx-backgorund-radius: 20;" text="Id Produit" />
+                        <TableColumn fx:id="col_nom_produit" onEditCommit="#EditString" prefWidth="123.0" style="-fx-backgorund-radius: 20;" text="Nom Produit" />
+                        <TableColumn fx:id="col_marque_produit" onEditCommit="#EditString" prefWidth="109.0" style="-fx-backgorund-radius: 20;" text="Marque Produit" />
+                        <TableColumn fx:id="col_prix_produit" minWidth="7.0" onEditCommit="#EditFloat" prefWidth="104.0" style="-fx-backgorund-radius: 20;" text="Prix Produit" />
+                        <TableColumn fx:id="col_quantite_produit" minWidth="0.0" onEditCommit="#EditInteger" prefWidth="86.0" style="-fx-backgorund-radius: 20;" text="Quantité" />
+                        <TableColumn fx:id="col_type_produit" onEditCommit="#EditString" prefWidth="120.0" style="-fx-backgorund-radius: 20;" text="Type Produit" />
+                     </columns>
+                  </TableView>
+                  <Button layoutX="510.0" layoutY="515.0" mnemonicParsing="false" onAction="#ExportToExcel" prefHeight="53.0" prefWidth="115.0" style="-fx-background-color: #ffffff; -fx-border-color: #f27131; -fx-border-radius: 10;">
+                     <graphic>
+                        <HBox prefHeight="38.0" prefWidth="84.0">
+                           <children>
+                              <ImageView fitHeight="36.0" fitWidth="43.0" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/toExcel_icon.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets top="5.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Label text="Exporter Excel" textAlignment="CENTER" wrapText="true">
+                                 <HBox.margin>
+                                    <Insets left="3.0" top="3.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="34.0" layoutY="515.0" mnemonicParsing="false" onAction="#ExportToPDF" prefHeight="53.0" prefWidth="115.0" style="-fx-background-color: #ffffff; -fx-border-radius: 10; -fx-border-color: #f27131;">
+                     <graphic>
+                        <HBox prefHeight="38.0" prefWidth="84.0">
+                           <children>
+                              <ImageView fitHeight="36.0" fitWidth="43.0" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/toPDF_icon.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets top="5.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Label text="Exporter PDF" textAlignment="CENTER" wrapText="true">
+                                 <HBox.margin>
+                                    <Insets left="3.0" top="3.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </graphic>
+                  </Button>
+                  <TextField fx:id="search" layoutX="344.0" layoutY="36.0" onKeyReleased="#Search" prefHeight="38.0" prefWidth="276.0" promptText="Rechercher un produit.." />
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
