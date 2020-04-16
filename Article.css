@@ -1,0 +1,40 @@
+#pane_top{
+	-fx-background-color: #4d5463;
+}
+#label_title{
+	-fx-text-fill: white;
+}
+#anchorpane_center, #anchorpane_left, #anchorpane_right{
+	-fx-border-style: dotted;
+}
+#btn_save,#btn_add_new,#btn_mail,#btn_confirmer{
+	-fx-background-color: #0b824e;
+}
+#btn_edit,#btn_send{
+	-fx-background-color: orange;
+}
+#btn_delete,#btn_back,#btn_like{
+	-fx-background-color: red;
+}
+#btn_import{
+	-fx-background-color: orange;
+}
+
+
+#btn_print{
+	-fx-background-color: rgb(54,119,171);
+}
+#btn_pdf{
+	-fx-background-color: red;
+}
+
+.jfx-button{
+	-fx-opacity: 0.9;
+	-fx-text-fill: white;
+}
+.jfx-button:hover{
+	-fx-opacity: 1;
+}
+#btn_position{
+	-fx-text-fill: black;
+}

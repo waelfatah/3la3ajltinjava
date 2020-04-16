@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="blogsolo" prefHeight="408.0" prefWidth="723.0" style="-fx-background-color: orange;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.BlogsoloController">
+   <children>
+      <AnchorPane fx:id="article" layoutX="198.0" prefHeight="408.0" prefWidth="525.0" style="-fx-background-color: white;">
+         <children>
+            <Label fx:id="titreLabel" layoutX="47.0" layoutY="133.0" prefHeight="42.0" prefWidth="258.0" text="Titre :" />
+            <Label fx:id="descriptionLabel" layoutX="46.0" layoutY="235.0" prefHeight="117.0" prefWidth="367.0" text="Description:" />
+            <ImageView fx:id="articleView" fitHeight="149.0" fitWidth="227.0" layoutX="271.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="velo" fitHeight="25.0" fitWidth="60.0" layoutX="465.0" layoutY="376.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../pi/images/pi.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="titre" fill="DARKORANGE" layoutX="47.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Titre :">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Text>
+            <Text fx:id="description" fill="DARKORANGE" layoutX="47.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description :">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Text>
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="likeButton" buttonType="RAISED" layoutX="71.0" layoutY="142.0" onAction="#Like" style="-fx-background-color: green;" text="J'aime" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="backButton" layoutX="28.0" layoutY="78.0" onAction="#Back" style="-fx-background-color: green;" text="Retourner au menu" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="dislikeButton" buttonType="RAISED" layoutX="48.0" layoutY="204.0" onAction="#Dislike" style="-fx-background-color: green;" text="Je n'aime pas" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
