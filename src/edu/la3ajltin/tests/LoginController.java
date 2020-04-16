@@ -63,7 +63,8 @@ public class LoginController implements Initializable {
     public void login(ActionEvent Event) throws SQLException, IOException {
 
             login();
-            if(Session.getUser().getRoles().equalsIgnoreCase("a:1:{i:0;s:10:"+"ROLE_ADMIN"+";}")){
+            System.out.println(Session.getUser().getRoles());
+            if(Session.getUser().getRoles().contains("ROLE_ADMIN")){
             Stage stage = (Stage) login.getScene().getWindow();
             stage.close();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/edu/la3ajltin/gui/MainMenu.fxml"));
