@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorpane_parent" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #FF8C00;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.SessionController">
+    <stylesheets>
+        <URL value="@session.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane fx:id="anchorpane_accueil" prefHeight="359.0" prefWidth="700.0">
+         <children>
+            <AnchorPane fx:id="anchorpane_login" layoutX="385.0" layoutY="63.0" prefHeight="313.0" prefWidth="312.0" style="-fx-background-color: white;">
+               <children>
+                  <JFXTextField fx:id="txt_username" layoutX="34.0" layoutY="88.0" prefHeight="25.0" prefWidth="225.0" promptText="Username :" />
+                  <JFXPasswordField fx:id="txt_mdp" layoutX="34.0" layoutY="158.0" prefHeight="25.0" prefWidth="225.0" promptText="Password : " />
+                  <JFXButton fx:id="btn_confirm" layoutX="173.0" layoutY="211.0" onAction="#Signin" prefHeight="25.0" prefWidth="86.0" style="-fx-background-color: green;" text="Confirm" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></JFXButton>
+                  <Label fx:id="signin" layoutX="101.0" layoutY="22.0" prefHeight="35.0" prefWidth="178.0" text="Sign In" textFill="DARKORANGE">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <Hyperlink layoutX="80.0" layoutY="267.0" text="Forgot your password ?" textFill="#383838" visited="true" />
+                  <Label fx:id="errorLogin" layoutX="34.0" layoutY="188.0" prefHeight="17.0" prefWidth="225.0" textFill="RED" />
+                  <Label fx:id="errorPass" layoutX="34.0" layoutY="119.0" prefHeight="17.0" prefWidth="225.0" textFill="RED" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="mur" layoutY="-3.0" prefHeight="449.0" prefWidth="374.0" style="-fx-background-color: #FF8C00;">
+               <children>
+                  <Label fx:id="welcome" layoutX="20.0" layoutY="65.0" prefHeight="43.0" prefWidth="323.0" text="Welcome to 3la 3ajeltin" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="image" fitHeight="204.0" fitWidth="367.0" layoutX="10.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../pi/images/pic.jpeg" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="slogan" layoutX="22.0" layoutY="102.0" prefHeight="25.0" prefWidth="158.0" text="The wolrd of Bikes.." textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
+                  <JFXButton fx:id="btn_signup" layoutX="248.0" layoutY="143.0" onAction="#SignUp" prefHeight="25.0" prefWidth="125.0" style="-fx-background-color: green;" text="Sign Up !" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></JFXButton>
+                  <Label fx:id="dont" layoutX="15.0" layoutY="146.0" prefHeight="26.0" prefWidth="234.0" text="Don't have an account yet ?" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
