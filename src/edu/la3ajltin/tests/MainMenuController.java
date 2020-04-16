@@ -124,4 +124,10 @@ public class MainMenuController implements Initializable {
         stage.show();
     }
 
+    @FXML
+    private void LoadOnlineBack(MouseEvent event) throws IOException {
+        String url = "http://localhost/3la3ajltin/web/app_dev.php/admin/";
+        java.awt.Desktop.getDesktop().browse(java.net.URI.create(url));
+    }
+
 }

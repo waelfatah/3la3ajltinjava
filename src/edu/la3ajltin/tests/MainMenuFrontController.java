@@ -7,7 +7,10 @@ package edu.la3ajltin.tests;
 
 import edu.la3ajltin.entities.Session;
 import edu.la3ajltin.entities.fos_user;
+import java.awt.Desktop;
+import java.io.File;
 import java.io.IOException;
+import java.net.URI;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
@@ -214,6 +217,12 @@ public class MainMenuFrontController implements Initializable {
 //            fxml.getScene().setFill(Color.TRANSPARENT);
 //            fxml.getScene().getStylesheets().setAll(gestionassurance.First.class.getResource("/gestionassurance/gui/styles.css").toString());
         } catch (IOException ex) {
-        }        
+        }
+    }
+
+    @FXML
+    private void LoadOnlineShop(MouseEvent event) throws IOException {
+         String url = "http://localhost/3la3ajltin/web/app_dev.php/shop/front/shop";
+         java.awt.Desktop.getDesktop().browse(java.net.URI.create(url));
     }
 }

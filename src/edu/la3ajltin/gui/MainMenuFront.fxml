@@ -15,7 +15,7 @@
    <children>
       <AnchorPane layoutX="-1.0" prefHeight="80.0" prefWidth="390.0" style="-fx-background-color: f26722;">
          <children>
-            <ImageView fitHeight="79.0" fitWidth="396.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="79.0" fitWidth="396.0" layoutX="1.0" onMouseClicked="#LoadOnlineShop" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/3la3ajltinfront.png" />
                </image>
