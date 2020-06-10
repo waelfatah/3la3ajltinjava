@@ -1,4 +1,4 @@
-package Utils;
+package edu.la3ajltin.tools;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

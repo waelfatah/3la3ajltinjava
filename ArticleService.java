@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Services;
+package edu.la3ajltin.services;
 
-import Models.Article;
-import Utils.DBConnection;
+import edu.la3ajltin.entities.Article;
+import edu.la3ajltin.tools.DBConnection;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package GUI;
+package edu.la3ajltin.gui;
 
-import Models.User;
-import Services.ServiceUser;
-import Utils.mailer;
+import edu.la3ajltin.entities.User;
+import edu.la3ajltin.services.ServiceUser;
+import edu.la3ajltin.tools.mailer;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXDatePicker;
@@ -224,7 +224,7 @@ public class SignUpController implements Initializable {
    
 
     private void table(ActionEvent event) throws IOException {
-        Parent tableViewParent = FXMLLoader.load(getClass().getResource("/GUI/SignUp.fxml"));
+        Parent tableViewParent = FXMLLoader.load(getClass().getResource("/edu/la3ajltin/gui/SignUp.fxml"));
         Scene tabbleViewScene = new Scene(tableViewParent);
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
         window.setScene(tabbleViewScene);

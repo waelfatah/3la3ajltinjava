@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="685.0" prefWidth="1309.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.la3ajltin.tests.MainMenuFrontController">
+   <children>
+      <AnchorPane layoutX="-1.0" prefHeight="80.0" prefWidth="390.0" style="-fx-background-color: f26722;">
+         <children>
+            <ImageView fitHeight="79.0" fitWidth="396.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/3la3ajltinfront.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <VBox layoutX="389.0" prefHeight="27.0" prefWidth="927.0" style="-fx-background-color: f26722;">
+         <children>
+            <AnchorPane prefHeight="27.0" prefWidth="933.0" style="-fx-background-color: f26722;">
+               <children>
+                  <Button fx:id="closeButton" layoutX="895.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#closeWindow" onMouseEntered="#changeColorClose" onMouseExited="#remainColorClose" prefHeight="20.0" prefWidth="21.0" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/cancel.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="minButton" layoutX="863.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#minimizeButton" onMouseEntered="#changeColorMin" onMouseExited="#remainColorMin" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="26.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/minus.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <ImageView fitHeight="24.0" fitWidth="32.0" layoutX="833.0" layoutY="1.0" onMouseClicked="#Deconnexion" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../Desktop/logout.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <VBox layoutX="390.0" layoutY="27.0" prefHeight="55.0" prefWidth="927.0" style="-fx-border-color: #ffffff; -fx-background-color: f26722;">
+         <children>
+            <HBox prefHeight="47.0" prefWidth="922.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="187.0" style="-fx-background-color: transparent; -fx-border-color: #ffffff;">
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="118.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/help.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="53.0" prefWidth="254.0" style="-fx-background-color: transparent; -fx-border-color: #ffffff;">
+                     <graphic>
+                        <ImageView fitHeight="52.0" fitWidth="234.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/nosmagasins.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="meConnecter" mnemonicParsing="false" onAction="#LoadProfil" prefHeight="85.0" prefWidth="235.0" style="-fx-background-color: transparent; -fx-border-color: #ffffff;">
+                     <graphic>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="40.0" fitWidth="78.0" onMouseClicked="#LoadProfil" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/userfront.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="prenom" prefHeight="43.0" prefWidth="68.0" text="Label" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Black" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="nom" prefHeight="47.0" prefWidth="89.0" text="Nour" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Black" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#LoadPanier" prefHeight="104.0" prefWidth="201.0" style="-fx-background-color: transparent; -fx-border-color: #ffffff;">
+                     <graphic>
+                        <ImageView fitHeight="60.0" fitWidth="232.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/monpanier.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <AnchorPane layoutY="80.0" prefHeight="605.0" prefWidth="243.0">
+         <children>
+            <VBox layoutX="40.0" layoutY="42.0" prefHeight="605.0" prefWidth="243.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <HBox prefHeight="37.0" prefWidth="243.0" style="-fx-background-color: f26722;">
+                     <children>
+                        <TextField prefHeight="40.0" prefWidth="222.0" promptText="Rechercher">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </TextField>
+                        <Button mnemonicParsing="false" style="-fx-background-color: f26722;">
+                           <graphic>
+                              <ImageView fitHeight="37.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/search.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="veloBox" onMouseEntered="#changeColorVelo" prefHeight="60.0" prefWidth="243.0" style="-fx-border-color: f26722;">
+                     <children>
+                        <Label fx:id="veloLabel" prefHeight="58.0" prefWidth="19.0" />
+                        <Button fx:id="gestionVélos" mnemonicParsing="false" onAction="#LoadGestionProduits" prefHeight="64.0" prefWidth="222.0" style="-fx-background-color: transparent;">
+                           <graphic>
+                              <Label prefHeight="35.0" prefWidth="206.0" text="Vélos">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                              </Label>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="accessBox" onMouseEntered="#changeColorAccess" onMouseExited="#remainColorAccess" prefHeight="60.0" prefWidth="243.0" style="-fx-border-color: f26722;">
+                     <children>
+                        <Label fx:id="accessLabel" prefHeight="58.0" prefWidth="19.0" />
+                        <Button mnemonicParsing="false" onAction="#LoadGestionAccessoires" prefHeight="64.0" prefWidth="222.0" style="-fx-background-color: transparent;">
+                           <graphic>
+                              <Label prefHeight="35.0" prefWidth="206.0" text="Accessoires, Casques, Boute...">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                              </Label>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="offresBox" prefHeight="60.0" prefWidth="243.0" style="-fx-border-color: f26722;">
+                     <children>
+                        <Label fx:id="offresLabel" prefHeight="58.0" prefWidth="19.0" />
+                        <Button mnemonicParsing="false" prefHeight="64.0" prefWidth="222.0" style="-fx-background-color: transparent;">
+                           <graphic>
+                              <Label prefHeight="35.0" prefWidth="206.0" text="Offres d'occasion/ Revendre">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                              </Label>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="blogBox" prefHeight="60.0" prefWidth="243.0" style="-fx-border-color: f26722;">
+                     <children>
+                        <Label fx:id="blogLabel" prefHeight="58.0" prefWidth="19.0" />
+                        <Button mnemonicParsing="false" style="-fx-background-color: transparent;">
+                           <graphic>
+                              <ImageView fitHeight="382.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/qa.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#LoadGestionArticle" prefHeight="58.0" prefWidth="117.0" style="-fx-background-color: transparent;">
+                           <graphic>
+                              <Label prefHeight="35.0" prefWidth="206.0" text="Blog 3la3ajltin">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                              </Label>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="eventsBox" prefHeight="49.0" prefWidth="243.0" style="-fx-border-color: f26722;">
+                     <children>
+                        <Label fx:id="eventsLabel" prefHeight="58.0" prefWidth="19.0" />
+                        <Button mnemonicParsing="false" prefHeight="52.0" prefWidth="37.0" style="-fx-background-color: transparent;">
+                           <graphic>
+                              <ImageView fitHeight="47.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/calendar%20(1).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="47.0" prefWidth="168.0" style="-fx-background-color: transparent;">
+                           <graphic>
+                              <Label prefHeight="35.0" prefWidth="206.0" text="Evénements 3la3ajltin">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                              </Label>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="entretienBox" prefHeight="60.0" prefWidth="243.0" style="-fx-border-color: f26722;">
+                     <children>
+                        <Label fx:id="entretienLabel" prefHeight="58.0" prefWidth="19.0" />
+                        <Button mnemonicParsing="false" prefHeight="58.0" prefWidth="42.0" style="-fx-background-color: transparent;">
+                           <graphic>
+                              <ImageView fitHeight="55.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/tools.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="58.0" prefWidth="162.0" style="-fx-background-color: transparent;">
+                           <graphic>
+                              <Label prefHeight="35.0" prefWidth="206.0" text="Entretien et réparation">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                              </Label>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="marquesBox" prefHeight="60.0" prefWidth="243.0" style="-fx-border-color: f26722;">
+                     <children>
+                        <Label fx:id="marquesLabel" prefHeight="58.0" prefWidth="19.0" />
+                        <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="53.0" style="-fx-background-color: transparent;">
+                           <graphic>
+                              <ImageView fitHeight="45.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/tag.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#LoadGestionCommandes" prefHeight="58.0" prefWidth="161.0" style="-fx-background-color: transparent;">
+                           <graphic>
+                              <Label prefHeight="35.0" prefWidth="206.0" text="Mes Commandes">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                              </Label>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="salesBox" prefHeight="60.0" prefWidth="243.0" style="-fx-border-color: f26722;">
+                     <children>
+                        <Label fx:id="salesLabel" prefHeight="58.0" prefWidth="19.0" />
+                        <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="53.0" style="-fx-background-color: transparent;">
+                           <graphic>
+                              <ImageView fitHeight="54.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/discount.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="58.0" prefWidth="161.0" style="-fx-background-color: transparent;">
+                           <graphic>
+                              <Label prefHeight="35.0" prefWidth="206.0" text="Pass Partenaires">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                              </Label>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="reccBox" prefHeight="60.0" prefWidth="243.0" style="-fx-border-color: f26722;">
+                     <children>
+                        <Label fx:id="reccLabel" prefHeight="58.0" prefWidth="19.0" />
+                        <Button mnemonicParsing="false" prefHeight="68.0" prefWidth="47.0" style="-fx-background-color: transparent;">
+                           <graphic>
+                              <ImageView fitHeight="45.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/claim.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="58.0" prefWidth="161.0" style="-fx-background-color: transparent;">
+                           <graphic>
+                              <Label prefHeight="35.0" prefWidth="206.0" text="Reclamations et avis">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                              </Label>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Label prefHeight="28.0" prefWidth="275.0" style="-fx-background-color: f26722;" text="All rights reserved © 2020" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="11.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <ScrollPane fx:id="myInterface" layoutX="243.0" layoutY="160.0" prefHeight="525.0" prefWidth="1073.0" />
+      <AnchorPane layoutX="243.0" layoutY="77.0" prefHeight="80.0" prefWidth="1073.0">
+         <children>
+            <Label fx:id="enaWin" layoutX="14.0" layoutY="14.0" prefHeight="27.0" prefWidth="125.0" text="Acceuil -" textFill="#979797">
+               <font>
+                  <Font name="Arial" size="11.0" />
+               </font>
+            </Label>
+            <Label fx:id="enaWinKbir" layoutX="14.0" layoutY="35.0" prefHeight="40.0" prefWidth="271.0" text="Bienvenue">
+               <font>
+                  <Font name="Arial" size="29.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

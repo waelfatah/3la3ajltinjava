@@ -1,10 +1,10 @@
-package Utils;
+package edu.la3ajltin.tools;
 
-import Models.Article;
-import Models.Position;
-import Models.ArticleJ;
-import Models.Fos_user;
-import Models.Test;
+import edu.la3ajltin.entities.Article;
+import edu.la3ajltin.entities.Position;
+import edu.la3ajltin.entities.ArticleJ;
+import edu.la3ajltin.entities.Fos_user_1;
+import edu.la3ajltin.entities.Test;
 import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -53,14 +53,14 @@ public class DataAccessObject {
 		return list;
 	}
 	
-	public ObservableList<Fos_user> getAccountsData(String query){
+	public ObservableList<Fos_user_1> getAccountsData(String query){
 		ObservableList list = FXCollections.observableArrayList();
 		try {
 			connect = database.getConnection();
 			pstmt = connect.prepareStatement(query);
 			rs = pstmt.executeQuery();
 			while(rs.next()) {
-				list.add(new Fos_user(rs.getInt("id"), rs.getString("username"), rs.getString("email"), rs.getString("password"), rs.getString("roles"), rs.getString("nom"), rs.getString("prenom")));
+				list.add(new Fos_user_1(rs.getInt("id"), rs.getString("username"), rs.getString("email"), rs.getString("password"), rs.getString("roles"), rs.getString("nom"), rs.getString("prenom")));
 			}
 		}catch(Exception e) {
 			e.printStackTrace();
@@ -102,14 +102,14 @@ public class DataAccessObject {
 	}
         
      
-            public ObservableList<Fos_user> getAccountsDat3(String query){
+            public ObservableList<Fos_user_1> getAccountsDat3(String query){
 		ObservableList list = FXCollections.observableArrayList();
 		try {
 			connect = database.getConnection();
 			pstmt = connect.prepareStatement(query);
 			rs = pstmt.executeQuery();
 			while(rs.next()) {
-				list.add(new Fos_user(rs.getInt("id"), rs.getString("username"), rs.getString("email"), rs.getString("password"), rs.getString("roles"), rs.getString("nom"), rs.getString("prenom")));
+				list.add(new Fos_user_1(rs.getInt("id"), rs.getString("username"), rs.getString("email"), rs.getString("password"), rs.getString("roles"), rs.getString("nom"), rs.getString("prenom")));
 			}
 		}catch(Exception e) {
 			e.printStackTrace();

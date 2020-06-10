@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package GUI;
+package edu.la3ajltin.gui;
 
 import com.jfoenix.controls.JFXButton;
 import java.io.IOException;
@@ -19,7 +19,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-import static GUI.AccueilController.idTest;
+import static edu.la3ajltin.gui.AccueilController.idTest;
 
 /**
  * FXML Controller class
@@ -79,7 +79,7 @@ public class BlogsoloController implements Initializable {
         
          @FXML
     private void Back(ActionEvent event) throws IOException {
-         FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/Accueil.fxml"));
+         FXMLLoader loader = new FXMLLoader(getClass().getResource("/edu/la3ajltin/gui/Accueil.fxml"));
         Parent root = loader.load();
         titreLabel.getScene().setRoot(root);
     }

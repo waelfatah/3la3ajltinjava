@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Utils;
+package edu.la3ajltin.tools;
 
 
 import java.sql.PreparedStatement;
@@ -19,7 +19,7 @@ import javax.mail.Message;
 import javax.mail.Session;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
-import Services.ServiceUser;
+import edu.la3ajltin.services.ServiceUser;
 
 /**
  *

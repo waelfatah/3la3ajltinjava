@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Services;
+package edu.la3ajltin.services;
 
-import Utils.DBConnection;
-import Models.Client;
+import edu.la3ajltin.tools.DBConnection;
+import edu.la3ajltin.entities.Client;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -103,15 +103,14 @@ public class Service_Client {
     }
 
     public int updatetab(Client p) {
-        String requete = "UPDATE test set email=?, username=?, password=?,  prenom=?, nom=?, adresse=?, num_tel=? where id = ?";
+        String requete = "UPDATE fos_user set email=?, username=?, password=?,  prenom=?, nom=? where id = ?";
         try {
             pst = con.getConnection().prepareStatement(requete);
             pst.setString(1, p.getEmail());
             pst.setString(2, p.getUsername());
             pst.setString(3, p.getPrenom());
             pst.setString(4, p.getNom());
-            pst.setString(5, p.getAdresse());
-            pst.setString(6, p.getNum_tel());
+          
             pst.setInt(7, p.getid());
             System.out.println(p);
             pst.executeUpdate();
@@ -125,15 +124,13 @@ public class Service_Client {
 
     public int update(Client p) throws SQLException {
         try {
-            pst = con.getConnection().prepareStatement("UPDATE `test` SET `email`=?,`username`=?,`password`=?,`prenom`=?,`nom`=?,`adresse`=?,`num_tel`=? WHERE `id`=?");
-            pst.setString(1, p.getEmail());
-            pst.setString(2, p.getUsername());
-            pst.setString(3, p.getUsername());
-            pst.setString(4, p.getPrenom());
-            pst.setString(5, p.getNom());
-            pst.setString(6, p.getAdresse());
-            pst.setString(7, p.getNum_tel());
-            pst.setInt(8, p.getid());
+            pst = con.getConnection().prepareStatement("UPDATE `fos_user` SET `username`=?,`email`=?,`password`=?,`nom`=?,`prenom`=? WHERE `id`=?");
+            pst.setString(2, p.getEmail());
+            pst.setString(1, p.getUsername());
+            pst.setString(2, p.getPassword());
+            pst.setString(5, p.getPrenom());
+            pst.setString(4, p.getNom());
+          
             pst.executeUpdate();
             return 1;
         } catch (Exception e) {
@@ -160,18 +157,15 @@ public class Service_Client {
 
     public Client chercher(int id) {
         try {
-            String requete = "SELECT `id`, `email`, `username`, `password`, `prenom`, `nom`, `adresse`, `num_tel`  FROM `test` WHERE `id`=? ";
+            String requete = "SELECT `id`, `email`, `username`, `password`, `prenom`, `nom`  FROM `fos_user` WHERE `id`=? ";
             pst = con.getConnection().prepareStatement(requete);
             pst.setInt(1, id);
             rs = pst.executeQuery();
             while (rs.next()) {
                 Client R = new Client(rs.getInt("id"), rs.getString("email"),
                         rs.getString("username"), rs.getString("password"), rs.getString("prenom"),
-                        rs.getString("nom"), rs.getString("adresse"), rs.getString("num_tel"));
-                System.out.println(R.getUsername());
-                System.out.println(R.getAdresse());
-                System.out.println(R.getPrenom());
-                System.out.println(R.getNum_tel());
+                        rs.getString("nom"));
+               
                 return R;
 
             }

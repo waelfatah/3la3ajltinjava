@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package GUI;
+package edu.la3ajltin.gui;
 
 
 import java.net.URL;
@@ -20,7 +20,7 @@ import javafx.scene.chart.BarChart;
 import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
-import Utils.DBConnection;
+import edu.la3ajltin.tools.DBConnection;
 
 /**
  * FXML Controller class

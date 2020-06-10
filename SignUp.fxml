@@ -8,9 +8,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchorpane_inscription" prefHeight="449.0" prefWidth="710.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.SignUpController">
+<AnchorPane fx:id="anchorpane_inscription" prefHeight="449.0" prefWidth="710.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.la3ajltin.gui.SignUpController">
    <children>
-      <AnchorPane fx:id="anchropane_signup" prefHeight="408.0" prefWidth="710.0" style="-fx-background-color: #FF8C00;">
+      <AnchorPane fx:id="anchropane_signup" prefHeight="408.0" prefWidth="710.0" style="-fx-background-color: #f26722;">
          <children>
             <Label fx:id="thank_you" layoutX="456.0" layoutY="134.0" text="THANK YOU " textFill="WHITE">
                <font>
@@ -29,12 +29,12 @@
             </Label>
             <AnchorPane fx:id="anchorpane_register" layoutX="-1.0" prefHeight="449.0" prefWidth="422.0" style="-fx-background-color: white;">
                <children>
-                  <JFXButton fx:id="ajouter" buttonType="RAISED" layoutX="290.0" layoutY="364.0" onAction="#signUpConfirm" style="-fx-background-color: #FF8C00;" text="Confirm" textFill="WHITE">
+                  <JFXButton fx:id="ajouter" buttonType="RAISED" layoutX="290.0" layoutY="364.0" onAction="#signUpConfirm" style="-fx-background-color: #f26722;" text="Confirm" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="13.0" />
                      </font>
                   </JFXButton>
-                  <Label fx:id="signup" layoutX="155.0" layoutY="36.0" prefHeight="64.0" prefWidth="243.0" text="Sign Up " textFill="DARKORANGE">
+                  <Label fx:id="signup" layoutX="155.0" layoutY="36.0" prefHeight="64.0" prefWidth="243.0" text="Sign Up " textFill="#f26722">
                      <font>
                         <Font name="System Bold" size="24.0" />
                      </font>

@@ -3,17 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Services;
+package edu.la3ajltin.services;
 
-import Utils.DBConnection;
-import Models.User;
+import edu.la3ajltin.tools.DBConnection;
+import edu.la3ajltin.entities.User;
 import java.sql.SQLException;
 import java.util.List;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import GUI.IService1;
+import edu.la3ajltin.gui.IService1;
 /**
  *
  * @author azizs

@@ -3,8 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package GUI;
-import Models.Article;
+package edu.la3ajltin.gui;
+import edu.la3ajltin.entities.Article;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
@@ -56,20 +56,21 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.FileChooser;
 import javax.imageio.ImageIO;
 import org.apache.commons.lang3.RandomStringUtils;
-import Models.ArticleJ;
-import Models.Fos_user;
-import Models.UserSession;
-import Services.ArticleService;
-import Utils.DBConnection;
-import Utils.DataAccessObject;
-import Utils.DataSource;
-import Utils.SendMail;
+
+import edu.la3ajltin.entities.Fos_user_1;
+import edu.la3ajltin.entities.UserSession;
+import edu.la3ajltin.services.ArticleService;
+import edu.la3ajltin.tools.DBConnection;
+import edu.la3ajltin.tools.DataAccessObject;
+import edu.la3ajltin.tools.DataSource;
+import edu.la3ajltin.tools.SendMail;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.PageSize;
 import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
+import edu.la3ajltin.entities.Session;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.sql.Date;
@@ -191,7 +192,11 @@ public class ArticleController implements Initializable{
         
      
        btn_save.setOnAction(e->{
-			saveAccount();
+           try {
+               saveAccount();
+           } catch (Exception ex) {
+               Logger.getLogger(ArticleController.class.getName()).log(Level.SEVERE, null, ex);
+           }
 		});
        
        btn_edit.setOnAction(e->{
@@ -210,7 +215,7 @@ public class ArticleController implements Initializable{
 		});
 
        refreshTable();
-          Fos_user f;
+          Fos_user_1 f;
           Article a;
      
        
@@ -299,7 +304,7 @@ public class ArticleController implements Initializable{
             successE.setHeaderText(null);
             successE.setContentText("article approuvé !");
             successE.showAndWait();
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/Article.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/edu/la3ajltin/gui/Article.fxml"));
             Parent root = loader.load();
             tblview.getScene().setRoot(root);
         
@@ -319,7 +324,7 @@ public class ArticleController implements Initializable{
             successE.setHeaderText(null);
             successE.setContentText("article rejeté !");
             successE.showAndWait();
-             FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/Article.fxml"));
+             FXMLLoader loader = new FXMLLoader(getClass().getResource("/edu/la3ajltin/gui/Article.fxml"));
             Parent root = loader.load();
             tblview.getScene().setRoot(root);
         
@@ -332,7 +337,7 @@ public class ArticleController implements Initializable{
          }
   
    @FXML
-   private void saveAccount() { // for saving
+   private void saveAccount() throws Exception { // for saving
     
 		Date date = Date.valueOf(java.time.LocalDate.now());
                 
@@ -356,7 +361,7 @@ public class ArticleController implements Initializable{
                 alert.showAndWait();
                 }else if(ADD){ // if add button is pressed
                     System.out.println(UserSession.getCurrentSession());
-			query = "INSERT INTO article(Titre,Description,Date,id_user,image,updated_at,etat) VALUES('"+titre+"', '"+description+"', '"+date+"','"+UserSession.getCurrentSession()+"','"+photo+"','"+date+"','en cours');";
+			query = "INSERT INTO article(Titre,Description,Date,id_user,image,updated_at,etat) VALUES('"+titre+"', '"+description+"', '"+date+"',"+Session.getCurrentSession()+",'"+photo+"','"+date+"','en cours');";
                       
                         Alert alert = new Alert(Alert.AlertType.WARNING);
                 alert.setTitle("Ajout d'un article");

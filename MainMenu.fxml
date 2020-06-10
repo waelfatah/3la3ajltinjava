@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="685.0" prefWidth="1309.0" style="-fx-background-color: #2e2d2d;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.la3ajltin.tests.MainMenuController">
+    <stylesheets>
+        <URL value="@/edu/la3ajltin/gui/mainmenu.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane prefHeight="685.0" prefWidth="354.0" style="-fx-background-color: #2e2d2d;">
+         <children>
+            <AnchorPane layoutX="-2.0" layoutY="129.0" prefHeight="561.0" prefWidth="354.0" AnchorPane.bottomAnchor="-5.0" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="129.0">
+               <children>
+                  <HBox layoutX="76.0" layoutY="276.0" prefHeight="43.0" prefWidth="169.0">
+                     <children>
+                        <Label prefHeight="54.0" prefWidth="299.0" text="Gestion Entretiens" textFill="WHITE">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="74.0" layoutY="332.0" prefHeight="43.0" prefWidth="173.0">
+                     <children>
+                        <Label prefHeight="54.0" prefWidth="299.0" text="Gestion Reclamations" textFill="WHITE">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Button fx:id="gestProduit" layoutX="40.0" layoutY="54.0" mnemonicParsing="false" onAction="#LoadGestionProduits" prefHeight="51.0" prefWidth="191.0" style="-fx-background-color: #2e2d2d;">
+                     <graphic>
+                        <HBox prefHeight="43.0" prefWidth="156.0">
+                           <children>
+                              <Label prefHeight="43.0" prefWidth="192.0" text="      Gestion Produits " textAlignment="JUSTIFY" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="66.0" layoutY="161.0" mnemonicParsing="false" style="-fx-background-color: #2e2d2d;">
+                     <graphic>
+                        <HBox prefHeight="43.0" prefWidth="123.0">
+                           <children>
+                              <Label prefHeight="54.0" prefWidth="299.0" text="Gestion Offres" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="66.0" layoutY="107.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="179.0" style="-fx-background-color: #2e2d2d;">
+                     <graphic>
+                        <HBox prefHeight="43.0" prefWidth="277.0" style="-fx-background-color: #2e2d2d;">
+                           <children>
+                              <Label prefHeight="43.0" prefWidth="270.0" text="Gestion Evenements" textAlignment="RIGHT" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </graphic>
+                  </Button>
+                  <ImageView fitHeight="36.0" fitWidth="30.0" layoutX="36.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/product.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="36.0" fitWidth="30.0" layoutX="36.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/calendar.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="36.0" fitWidth="30.0" layoutX="36.0" layoutY="171.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/offer.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="36.0" fitWidth="30.0" layoutX="35.0" layoutY="283.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/support.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="36.0" fitWidth="30.0" layoutX="36.0" layoutY="337.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/review.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="36.0" fitWidth="30.0" layoutX="35.0" layoutY="394.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/truck.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="51.0" fitWidth="179.0" layoutX="15.0" layoutY="-18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/modules.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="produit" layoutY="62.0" prefHeight="31.0" prefWidth="12.0" />
+                  <Label fx:id="Evenement" layoutX="1.0" layoutY="117.0" prefHeight="31.0" prefWidth="12.0" />
+                  <Label fx:id="offre" layoutX="1.0" layoutY="173.0" prefHeight="31.0" prefWidth="12.0" />
+                  <Label fx:id="blog" layoutX="1.0" layoutY="230.0" prefHeight="31.0" prefWidth="12.0" />
+                  <Label fx:id="entretiens" layoutX="1.0" layoutY="283.0" prefHeight="31.0" prefWidth="12.0" />
+                  <Label fx:id="reclamation" layoutX="1.0" layoutY="339.0" prefHeight="31.0" prefWidth="12.0" />
+                  <Label fx:id="livraison" layoutY="393.0" prefHeight="31.0" prefWidth="12.0" />
+                  <HBox layoutX="74.0" layoutY="388.0" prefHeight="43.0" prefWidth="159.0">
+                     <children>
+                        <Label prefHeight="54.0" prefWidth="179.0" text="Gestion Livraisons" textFill="WHITE">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Button fx:id="gestProduit1" layoutX="40.0" layoutY="444.0" mnemonicParsing="false" onAction="#LoadGestionUser" prefHeight="51.0" prefWidth="191.0" style="-fx-background-color: #2e2d2d;">
+                     <graphic>
+                        <HBox prefHeight="43.0" prefWidth="156.0">
+                           <children>
+                              <Label prefHeight="43.0" prefWidth="192.0" text="      Gestion Utilisateurs " textAlignment="JUSTIFY" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </graphic>
+                  </Button>
+                  <ImageView fitHeight="68.0" fitWidth="76.0" layoutX="16.0" layoutY="435.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../../../wamp64/www/Projet/src/Images/user-01.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="produit1" layoutX="6.0" layoutY="454.0" prefHeight="31.0" prefWidth="12.0" />
+                  <Button fx:id="gestProduit2" layoutX="40.0" layoutY="218.0" mnemonicParsing="false" onAction="#LoadGestionBlog" prefHeight="51.0" prefWidth="191.0" style="-fx-background-color: #2e2d2d;">
+                     <graphic>
+                        <HBox prefHeight="43.0" prefWidth="156.0">
+                           <children>
+                              <Label prefHeight="43.0" prefWidth="192.0" text="      Gestion Blog " textAlignment="JUSTIFY" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </graphic>
+                  </Button>
+                  <ImageView fitHeight="36.0" fitWidth="30.0" layoutX="37.0" layoutY="227.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/blog.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="73.0" fitWidth="328.0" layoutX="12.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/3la3ajltin.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="login" layoutX="251.0" layoutY="596.0" mnemonicParsing="false" onAction="#allerFront" prefHeight="68.0" prefWidth="76.0" style="-fx-background-radius: 5px; -fx-border-radius: 10px; -fx-background-color: #f26722;" text="🡢" textFill="WHITE">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <VBox layoutX="354.0" prefHeight="30.0" prefWidth="958.0">
+         <children>
+            <AnchorPane prefHeight="34.0" prefWidth="956.0" style="-fx-background-color: #2e2d2d;">
+               <children>
+                  <Button fx:id="closeButton" layoutX="928.0" layoutY="-1.0" mnemonicParsing="false" onMouseClicked="#closeWindow" onMouseEntered="#changeColorClose" onMouseExited="#remainColorClose" prefHeight="34.0" prefWidth="30.0" style="-fx-background-color: #2e2d2d;">
+                     <graphic>
+                        <ImageView fitHeight="21.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/cancel.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="minButton" layoutX="896.0" layoutY="-1.0" mnemonicParsing="false" onMouseClicked="#minimizeButton" onMouseEntered="#changeColorMin" onMouseExited="#remainColorMin" prefHeight="34.0" prefWidth="30.0" style="-fx-background-color: #2e2d2d;">
+                     <graphic>
+                        <ImageView fitHeight="21.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/minus.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <ImageView fitHeight="30.0" fitWidth="24.0" layoutX="424.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/user.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="460.0" layoutY="2.0" prefHeight="33.0" prefWidth="159.0" text="Nour Ghidaoui" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Black" size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="866.0" layoutY="4.0" onMouseClicked="#Deconnexion" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../Desktop/logout.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <VBox layoutX="354.0" layoutY="33.0" prefHeight="652.0" prefWidth="958.0" style="-fx-background-color: #403e3e;">
+         <children>
+            <ScrollPane fx:id="myInterface" prefHeight="661.0" prefWidth="958.0" style="-fx-background-color: transparent;" styleClass="scroll-bar" stylesheets="@mainmenu.css">
+               <content>
+                  <AnchorPane prefHeight="645.0" prefWidth="947.0" stylesheets="@mainmenu.css">
+                     <children>
+                        <ImageView fitHeight="185.0" fitWidth="648.0" layoutX="155.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/welcome.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="275.0" layoutY="342.0" prefHeight="85.0" prefWidth="408.0" text="Cliquez sur un module pour continuer." textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="Arial Black" size="26.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <styleClass>
+                        <String fx:value="thumb" />
+                        <String fx:value="scroll-bar" />
+                        <String fx:value="track" />
+                     </styleClass>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

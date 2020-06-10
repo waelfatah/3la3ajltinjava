@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package GUI;
-import static GUI.ArticleController.saveToFileImageNormal;
-import Models.Article;
-import Models.Fos_user;
+package edu.la3ajltin.gui;
+import static edu.la3ajltin.gui.ArticleController.saveToFileImageNormal;
+import edu.la3ajltin.entities.Article;
+import edu.la3ajltin.entities.Fos_user_1;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
@@ -32,10 +32,10 @@ import javafx.collections.ObservableList;
 import java.util.List;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import Utils.DBConnection;
-import Utils.DataAccessObject;
-import Models.Test;
-import Utils.DataSource;
+import edu.la3ajltin.tools.DBConnection;
+import edu.la3ajltin.tools.DataAccessObject;
+import edu.la3ajltin.entities.Test;
+import edu.la3ajltin.tools.DataSource;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.PageSize;
@@ -80,7 +80,7 @@ public class TestController implements Initializable{
     @FXML
     private JFXButton btn_save;
     @FXML
-    private TableView<Fos_user> tblview;
+    private TableView<Fos_user_1> tblview;
     @FXML
     private AnchorPane anchorpane_center;
     @FXML
@@ -121,19 +121,19 @@ public class TestController implements Initializable{
     @FXML
     private JFXButton btn_print;
     @FXML
-    private TableColumn<Fos_user,String> column_nom;
+    private TableColumn<Fos_user_1,String> column_nom;
     @FXML
-    private TableColumn<Fos_user,String> column_prenom;
+    private TableColumn<Fos_user_1,String> column_prenom;
     @FXML
-    private TableColumn<Fos_user,String> column_username;
+    private TableColumn<Fos_user_1,String> column_username;
     @FXML
-    private TableColumn<Fos_user,String> column_role;
+    private TableColumn<Fos_user_1,String> column_role;
     @FXML
-    private TableColumn<Fos_user,String> column_mdp;
+    private TableColumn<Fos_user_1,String> column_mdp;
      @FXML
-    private TableColumn<Fos_user,String> column_email;
+    private TableColumn<Fos_user_1,String> column_email;
      @FXML
-    private TableColumn<Fos_user,Integer> column_ID;
+    private TableColumn<Fos_user_1,Integer> column_ID;
     @FXML
     private JFXTextField prod_search;
     
@@ -208,7 +208,7 @@ public class TestController implements Initializable{
 	}
    @FXML
    private void deleteAccount() {
-		Fos_user selected = tblview.getSelectionModel().getSelectedItem();
+		Fos_user_1 selected = tblview.getSelectionModel().getSelectedItem();
 		ID = selected.getId();
                
 		query = "DELETE FROM fos_user WHERE id='"+ID+"'";
@@ -219,7 +219,7 @@ public class TestController implements Initializable{
         @FXML   
    private void editAccount()
    {
-       Fos_user selected = tblview.getSelectionModel().getSelectedItem();
+       Fos_user_1 selected = tblview.getSelectionModel().getSelectedItem();
 		ID = selected.getId();
 		txt_nom.setText(selected.getNom());
 		txt_prenom.setText(selected.getPrenom());
@@ -410,14 +410,14 @@ prod_search.setOnKeyReleased(e->{
               tblview.setOnMouseClicked(new EventHandler<MouseEvent>(){
             @Override
             public void handle(MouseEvent event) {
-    Fos_user art=tblview.getItems().get(tblview.getSelectionModel().getSelectedIndex());
+    Fos_user_1 art=tblview.getItems().get(tblview.getSelectionModel().getSelectedIndex());
 
     //tf_rate.setText(idprod);
 
 
            
                 TableColumn.CellEditEvent edittedcell = null;
-               Fos_user ar=gettemp(edittedcell);  
+               Fos_user_1 ar=gettemp(edittedcell);  
           System.out.println(ar);
                 String photo=ar.getImage();
                         System.out.println(photo);
@@ -426,8 +426,8 @@ prod_search.setOnKeyReleased(e->{
             imgview.setImage(imageURL);}
     }); 
          }
-    public Fos_user gettemp(TableColumn.CellEditEvent edittedCell) {
-        Fos_user test = tblview.getSelectionModel().getSelectedItem();
+    public Fos_user_1 gettemp(TableColumn.CellEditEvent edittedCell) {
+        Fos_user_1 test = tblview.getSelectionModel().getSelectedItem();
       
         return test;
     }

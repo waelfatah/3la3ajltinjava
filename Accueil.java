@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pi;
+package edu.la3ajltin.tests;
 
 
 import java.io.IOException;
@@ -29,7 +29,7 @@ public class Accueil extends Application {
        public void start(Stage primaryStage) throws IOException {
 		
 	// Parent root = FXMLLoader.load(getClass().getResource("Test.fxml"));
-            	 Parent root = FXMLLoader.load(getClass().getResource("/GUI/Accueil.fxml"));
+            	 Parent root = FXMLLoader.load(getClass().getResource("/edu/la3ajltin/gui/Accueil.fxml"));
 
             Scene scene = new Scene(root);
             

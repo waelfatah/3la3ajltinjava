@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package GUI;
+package edu.la3ajltin.gui;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
@@ -45,22 +45,23 @@ import javafx.stage.Stage;
 import javafx.util.Callback;
 import javax.imageio.ImageIO;
 import org.apache.commons.lang3.RandomStringUtils;
-import static GUI.ArticleController.saveToFileImageNormal;
-import Models.Article;
+import static edu.la3ajltin.gui.ArticleController.saveToFileImageNormal;
+import edu.la3ajltin.entities.Article;
 import tray.animations.AnimationType;
 import tray.notification.NotificationType;
 import tray.notification.TrayNotification;
 import org.controlsfx.control.textfield.TextFields;
-import Models.ArticleJ;
-import Models.ArticleListCell;
-import Models.Client;
-import Utils.DataAccessObject;
-import Utils.SendMail;
-import Services.Service_Client;
-import Models.UserSession;
-import Services.ArticleService;
-import Utils.DBConnection;
-import Utils.DataSource;
+import edu.la3ajltin.entities.ArticleJ;
+import edu.la3ajltin.entities.ArticleListCell;
+import edu.la3ajltin.entities.Client;
+import edu.la3ajltin.entities.Session;
+import edu.la3ajltin.tools.DataAccessObject;
+import edu.la3ajltin.tools.SendMail;
+import edu.la3ajltin.services.Service_Client;
+import edu.la3ajltin.entities.UserSession;
+import edu.la3ajltin.services.ArticleService;
+import edu.la3ajltin.tools.DBConnection;
+import edu.la3ajltin.tools.DataSource;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
@@ -269,7 +270,7 @@ public class AccueilController implements Initializable {
             return name;
         }
          @FXML
-     private void insertNewAccount() { // for adding new account
+     private void insertNewAccount() throws Exception { // for adding new account
 		titre = txt_titre.getText();
                 Date date = Date.valueOf(java.time.LocalDate.now());
 		description = txt_description.getText();
@@ -281,7 +282,7 @@ public class AccueilController implements Initializable {
         } catch (SQLException ex) {
             Logger.getLogger(ArticleController.class.getName()).log(Level.SEVERE, null, ex);
         }
-	       query = "INSERT INTO article(Titre,Description,Date,id_user,image,updated_at,etat) VALUES('"+titre+"', '"+description+"', '"+date+"','"+UserSession.getCurrentSession()+"','"+photo+"','"+date+"','"+"en cours"+"');";
+	       query = "INSERT INTO article(Titre,Description,Date,id_user,image,updated_at,etat) VALUES('"+titre+"', '"+description+"', '"+date+"','"+Session.getCurrentSession()+"','"+photo+"','"+date+"','"+"en cours"+"');";
 	
 
 		dao.saveData(query);
@@ -362,7 +363,7 @@ public class AccueilController implements Initializable {
         node = (Node) event.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
         stage.close();
-        Scene scene = new Scene(FXMLLoader.load(getClass().getResource("/GUI/Session.fxml")));
+        Scene scene = new Scene(FXMLLoader.load(getClass().getResource("/edu/la3ajltin/gui/Session.fxml")));
         stage.setScene(scene);
         stage.show();
     }
@@ -380,7 +381,7 @@ public class AccueilController implements Initializable {
 
     }
     private void table(ActionEvent event) throws IOException {
-        Parent tableViewParent = FXMLLoader.load(getClass().getResource("/GUI/Session.fxml"));
+        Parent tableViewParent = FXMLLoader.load(getClass().getResource("/edu/la3ajltin/gui/Session.fxml"));
         Scene tabbleViewScene = new Scene(tableViewParent);
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
         window.setScene(tabbleViewScene);
@@ -392,7 +393,7 @@ public class AccueilController implements Initializable {
     private void Read(ActionEvent event) throws IOException {
         if(articleList.getSelectionModel().getSelectedItem() != null){
             Article a = articleList.getSelectionModel().getSelectedItem();
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/blogsolo.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/edu/la3ajltin/gui/blogsolo.fxml"));
             Parent root = loader.load();
             articleList.getScene().setRoot(root);
             BlogsoloController blog = loader.getController();

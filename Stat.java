@@ -1,8 +1,8 @@
 
-package pi;
+package edu.la3ajltin.tests;
 
 
-import GUI.StatController;
+import edu.la3ajltin.gui.StatController;
 import javafx.application.Application;
 import static javafx.application.Application.launch;
 import javafx.fxml.FXMLLoader;
@@ -42,7 +42,7 @@ Parent root;
                              try {
         FXMLLoader loader = new FXMLLoader();
         loader.setController(new StatController());
-        loader.setLocation(getClass().getResource("/GUI/Stat.fxml"));
+        loader.setLocation(getClass().getResource("/edu/la3ajltin/gui/Stat.fxml"));
         root = loader.load();
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);

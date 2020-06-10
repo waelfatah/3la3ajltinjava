@@ -12,18 +12,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchorpane_parent" prefHeight="530.0" prefWidth="899.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ArticleController">
+<AnchorPane fx:id="anchorpane_parent" prefHeight="530.0" prefWidth="899.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.la3ajltin.gui.ArticleController">
    <children>
-      <Pane fx:id="pane_top" prefHeight="60.0" prefWidth="899.0">
-         <children>
-            <Label fx:id="label_title" layoutX="301.0" layoutY="-6.0" prefHeight="73.0" prefWidth="533.0" text="Gestion des articles">
-               <font>
-                  <Font name="Calibri" size="30.0" />
-               </font>
-            </Label>
-         </children>
-      </Pane>
-      <Pane fx:id="pane_mail" layoutY="59.0" prefHeight="471.0" prefWidth="899.0" style="-fx-background-color: white;">
+      <Pane fx:id="pane_mail" layoutY="59.0" prefHeight="645.0" prefWidth="1151.0" style="-fx-background-color: white;">
          <children>
             <JFXTextField fx:id="tfEmailAddress" layoutX="105.0" layoutY="57.0" prefHeight="39.0" prefWidth="766.0" />
             <JFXTextField fx:id="tfObject" layoutX="105.0" layoutY="128.0" prefHeight="39.0" prefWidth="766.0" />
@@ -39,46 +30,87 @@
          <children>
             <AnchorPane fx:id="anchorpane_right" layoutX="294.0" layoutY="14.0" prefHeight="439.0" prefWidth="575.0">
                <children>
-                  <JFXButton fx:id="btn_pdf" buttonType="RAISED" layoutX="35.0" layoutY="27.0" onAction="#ExportToPDF" prefHeight="25.0" prefWidth="55.0" text="PDF" />
-                  <JFXTextField fx:id="prod_search" layoutX="422.0" layoutY="8.0" promptText="Rechercher.." />
-                  <JFXButton fx:id="btn_mail" buttonType="RAISED" layoutX="99.0" layoutY="26.0" onAction="#handlebuttonAction" prefHeight="25.0" prefWidth="78.0" text="Send Mail" />
-                  <JFXButton fx:id="btn_stat" layoutX="185.0" layoutY="25.0" onAction="#showStat" style="-fx-background-color: orange;" text="Statistiques" />
-                  <TableView fx:id="tblview" layoutX="35.0" layoutY="57.0" prefHeight="320.0" prefWidth="519.0">
-                    <columns>
-                      <TableColumn fx:id="column_titre" prefWidth="75.0" text="Titre" />
-                      <TableColumn fx:id="column_description" prefWidth="141.0" text="Description" />
-                        <TableColumn fx:id="column_date" prefWidth="87.0" text="Date" />
-                        <TableColumn fx:id="column_user" prefWidth="62.0" text="id_User" />
-                        <TableColumn fx:id="column_ID" prefWidth="74.0" text="Id_Article" />
-                        <TableColumn fx:id="column_statut" prefWidth="79.0" text="Statut" />
-                    </columns>
-                  </TableView>
-                  <JFXButton fx:id="btn_rejeter" buttonType="RAISED" layoutX="273.0" layoutY="395.0" onAction="#annulerArticle" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: red;" text="Rejeter" />
-                  <JFXButton fx:id="btn_confirmer" buttonType="RAISED" layoutX="199.0" layoutY="395.0" onAction="#accepterArticle" text="Confirmer" />
-                  <Label layoutX="41.0" layoutY="399.0" text="Approbation de l'article :">
+                  <JFXButton fx:id="btn_pdf" buttonType="RAISED" layoutX="21.0" layoutY="27.0" onAction="#ExportToPDF" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: #f26722;" text="PDF">
                      <font>
                         <Font name="System Bold" size="12.0" />
+                     </font></JFXButton>
+                  <JFXTextField fx:id="prod_search" layoutX="555.0" layoutY="20.0" prefHeight="25.0" prefWidth="258.0" promptText="Rechercher.." />
+                  <JFXButton fx:id="btn_mail" buttonType="RAISED" layoutX="112.0" layoutY="26.0" onAction="#handlebuttonAction" prefHeight="25.0" prefWidth="89.0" style="-fx-background-color: #f26722;" text="Send Mail">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></JFXButton>
+                  <JFXButton fx:id="btn_stat" buttonType="RAISED" layoutX="212.0" layoutY="26.0" onAction="#showStat" prefHeight="25.0" prefWidth="89.0" style="-fx-background-color: #f26722;" text="Statistiques">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></JFXButton>
+                  <TableView fx:id="tblview" layoutX="21.0" layoutY="57.0" prefHeight="557.0" prefWidth="798.0">
+                    <columns>
+                      <TableColumn fx:id="column_titre" prefWidth="135.0" text="Titre" />
+                      <TableColumn fx:id="column_description" prefWidth="186.0" text="Description" />
+                        <TableColumn fx:id="column_date" prefWidth="101.0" text="Date" />
+                        <TableColumn fx:id="column_user" prefWidth="127.0" text="id_User" />
+                        <TableColumn fx:id="column_ID" prefWidth="106.0" text="Id_Article" />
+                        <TableColumn fx:id="column_statut" prefWidth="142.0" text="Statut" />
+                    </columns>
+                  </TableView>
+                  <JFXButton fx:id="btn_rejeter" buttonType="RAISED" layoutX="333.0" layoutY="26.0" onAction="#annulerArticle" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: #3b3b3c;" text="Rejeter">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btn_confirmer" buttonType="RAISED" layoutX="420.0" layoutY="26.0" onAction="#accepterArticle" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: #f26722;" text="Approuver">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <Label layoutX="335.0" layoutY="3.0" prefHeight="17.0" prefWidth="258.0" text="Approbation de l'article :" textFill="#3b3b3c">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
                      </font>
                   </Label>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="anchorpane_left" layoutX="14.0" layoutY="14.0" prefHeight="439.0" prefWidth="274.0">
+            <AnchorPane fx:id="anchorpane_left" layoutX="14.0" layoutY="14.0" prefHeight="608.0" prefWidth="274.0">
                <children>
-                  <JFXTextField fx:id="txt_titre" labelFloat="true" layoutX="14.0" layoutY="59.0" prefHeight="25.0" prefWidth="244.0" promptText="Titre" />
-                  <JFXButton fx:id="btn_save" buttonType="RAISED" layoutX="15.0" layoutY="400.0" onAction="#saveAccount" prefHeight="25.0" prefWidth="55.0" text="Save" />
-                  <JFXButton fx:id="btn_edit" buttonType="RAISED" layoutX="135.0" layoutY="400.0" prefHeight="25.0" prefWidth="55.0" text="Edit" />
-                  <JFXButton fx:id="btn_delete" buttonType="RAISED" layoutX="195.0" layoutY="400.0" onAction="#deleteAccount" prefHeight="25.0" prefWidth="55.0" text="Delete" />
-                  <JFXButton fx:id="btn_add_new" layoutX="75.0" layoutY="400.0" prefHeight="25.0" prefWidth="55.0" text="New" />
-                  <JFXTextField fx:id="txt_description" labelFloat="true" layoutX="15.0" layoutY="111.0" prefHeight="25.0" prefWidth="244.0" promptText="Description" />
-                  <ImageView fx:id="imgview" fitHeight="150.0" fitWidth="200.0" layoutX="43.0" layoutY="241.0" pickOnBounds="true" preserveRatio="true">
+                  <JFXTextField fx:id="txt_titre" labelFloat="true" layoutX="14.0" layoutY="110.0" prefHeight="25.0" prefWidth="244.0" promptText="Titre" />
+                  <JFXButton fx:id="btn_save" buttonType="RAISED" layoutX="125.0" layoutY="557.0" onAction="#saveAccount" prefHeight="25.0" prefWidth="129.0" style="-fx-background-color: #f26722;" text="Valider">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></JFXButton>
+                  <JFXButton fx:id="btn_edit" buttonType="RAISED" layoutX="99.0" layoutY="30.0" prefHeight="25.0" prefWidth="77.0" style="-fx-background-color: #f26722;" text="Edit">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></JFXButton>
+                  <JFXButton fx:id="btn_delete" buttonType="RAISED" layoutX="188.0" layoutY="30.0" onAction="#deleteAccount" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: #3b3b3c;" text="Delete">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></JFXButton>
+                  <JFXButton fx:id="btn_add_new" layoutX="13.0" layoutY="30.0" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: #f26722;" text="New">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></JFXButton>
+                  <JFXTextField fx:id="txt_description" labelFloat="true" layoutX="15.0" layoutY="182.0" prefHeight="25.0" prefWidth="244.0" promptText="Description" />
+                  <ImageView fx:id="imgview" fitHeight="207.0" fitWidth="237.0" layoutX="18.0" layoutY="315.0" pickOnBounds="true" preserveRatio="true">
                      <effect>
                         <Shadow />
                      </effect>
                   </ImageView>
-                  <JFXButton fx:id="btn_import" buttonType="RAISED" layoutX="137.0" layoutY="207.0" onAction="#addImage" text="Importer une image" />
+                  <JFXButton fx:id="btn_import" buttonType="RAISED" layoutX="124.0" layoutY="269.0" onAction="#addImage" style="-fx-background-color: #f26722;" text="Importer une image">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></JFXButton>
                </children>
             </AnchorPane>
          </children>
       </AnchorPane>
+      <Pane fx:id="pane_top" prefHeight="60.0" prefWidth="1151.0" style="-fx-background-color: #3b3b3c;">
+         <children>
+            <Label fx:id="label_title" layoutX="402.0" layoutY="-6.0" prefHeight="73.0" prefWidth="533.0" text="Gestion des articles">
+               <font>
+                  <Font name="Calibri Bold" size="40.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>
