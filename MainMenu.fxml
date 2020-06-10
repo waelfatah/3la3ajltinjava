@@ -12,18 +12,27 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="685.0" prefWidth="1309.0" style="-fx-background-color: #2e2d2d;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.la3ajltin.tests.MainMenuController">
+<AnchorPane id="AnchorPane" prefHeight="685.0" prefWidth="1309.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.la3ajltin.tests.MainMenuController">
     <stylesheets>
         <URL value="@/edu/la3ajltin/gui/mainmenu.css" />
     </stylesheets>
    <children>
       <AnchorPane prefHeight="685.0" prefWidth="354.0" style="-fx-background-color: #2e2d2d;">
          <children>
-            <AnchorPane layoutX="-2.0" layoutY="129.0" prefHeight="561.0" prefWidth="354.0" AnchorPane.bottomAnchor="-5.0" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="129.0">
+            <AnchorPane layoutX="-1.0" layoutY="129.0" prefHeight="454.0" prefWidth="354.0" AnchorPane.bottomAnchor="102.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="129.0">
                <children>
                   <HBox layoutX="76.0" layoutY="276.0" prefHeight="43.0" prefWidth="169.0">
                      <children>
                         <Label prefHeight="54.0" prefWidth="299.0" text="Gestion Entretiens" textFill="WHITE">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="74.0" layoutY="221.0" prefHeight="43.0" prefWidth="173.0">
+                     <children>
+                        <Label prefHeight="54.0" prefWidth="299.0" text="Gestion Blogs " textFill="WHITE">
                            <font>
                               <Font name="Arial" size="16.0" />
                            </font>
@@ -65,7 +74,7 @@
                         </HBox>
                      </graphic>
                   </Button>
-                  <Button layoutX="66.0" layoutY="107.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="179.0" style="-fx-background-color: #2e2d2d;">
+                  <Button fx:id="events" layoutX="66.0" layoutY="107.0" mnemonicParsing="false" onAction="#LoadGestionEvents" prefHeight="51.0" prefWidth="179.0" style="-fx-background-color: #2e2d2d;">
                      <graphic>
                         <HBox prefHeight="43.0" prefWidth="277.0" style="-fx-background-color: #2e2d2d;">
                            <children>
@@ -93,6 +102,11 @@
                         <Image url="@../../../images/offer.png" />
                      </image>
                   </ImageView>
+                  <ImageView fitHeight="36.0" fitWidth="30.0" layoutX="35.0" layoutY="228.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/blog.png" />
+                     </image>
+                  </ImageView>
                   <ImageView fitHeight="36.0" fitWidth="30.0" layoutX="35.0" layoutY="283.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../images/support.png" />
@@ -108,7 +122,7 @@
                         <Image url="@../../../images/truck.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="51.0" fitWidth="179.0" layoutX="15.0" layoutY="-18.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="30.0" fitWidth="179.0" layoutX="7.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../images/modules.png" />
                      </image>
@@ -129,43 +143,6 @@
                         </Label>
                      </children>
                   </HBox>
-                  <Button fx:id="gestProduit1" layoutX="40.0" layoutY="444.0" mnemonicParsing="false" onAction="#LoadGestionUser" prefHeight="51.0" prefWidth="191.0" style="-fx-background-color: #2e2d2d;">
-                     <graphic>
-                        <HBox prefHeight="43.0" prefWidth="156.0">
-                           <children>
-                              <Label prefHeight="43.0" prefWidth="192.0" text="      Gestion Utilisateurs " textAlignment="JUSTIFY" textFill="WHITE">
-                                 <font>
-                                    <Font name="Arial" size="16.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </HBox>
-                     </graphic>
-                  </Button>
-                  <ImageView fitHeight="68.0" fitWidth="76.0" layoutX="16.0" layoutY="435.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../../../../../wamp64/www/Projet/src/Images/user-01.png" />
-                     </image>
-                  </ImageView>
-                  <Label fx:id="produit1" layoutX="6.0" layoutY="454.0" prefHeight="31.0" prefWidth="12.0" />
-                  <Button fx:id="gestProduit2" layoutX="40.0" layoutY="218.0" mnemonicParsing="false" onAction="#LoadGestionBlog" prefHeight="51.0" prefWidth="191.0" style="-fx-background-color: #2e2d2d;">
-                     <graphic>
-                        <HBox prefHeight="43.0" prefWidth="156.0">
-                           <children>
-                              <Label prefHeight="43.0" prefWidth="192.0" text="      Gestion Blog " textAlignment="JUSTIFY" textFill="WHITE">
-                                 <font>
-                                    <Font name="Arial" size="16.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </HBox>
-                     </graphic>
-                  </Button>
-                  <ImageView fitHeight="36.0" fitWidth="30.0" layoutX="37.0" layoutY="227.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../images/blog.png" />
-                     </image>
-                  </ImageView>
                </children>
             </AnchorPane>
             <ImageView fitHeight="73.0" fitWidth="328.0" layoutX="12.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
@@ -173,7 +150,7 @@
                   <Image url="@../../../images/3la3ajltin.png" />
                </image>
             </ImageView>
-            <Button fx:id="login" layoutX="251.0" layoutY="596.0" mnemonicParsing="false" onAction="#allerFront" prefHeight="68.0" prefWidth="76.0" style="-fx-background-radius: 5px; -fx-border-radius: 10px; -fx-background-color: #f26722;" text="🡢" textFill="WHITE">
+            <Button fx:id="login" layoutX="249.0" layoutY="559.0" mnemonicParsing="false" onAction="#allerFront" prefHeight="68.0" prefWidth="76.0" style="-fx-background-radius: 5px; -fx-border-radius: 10px; -fx-background-color: #f26722;" text="🡢" textFill="WHITE">
                <font>
                   <Font size="22.0" />
                </font>
@@ -207,16 +184,11 @@
                         <Image url="@../../../images/user.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="460.0" layoutY="2.0" prefHeight="33.0" prefWidth="159.0" text="Nour Ghidaoui" textFill="WHITE">
+                  <Label layoutX="460.0" layoutY="2.0" prefHeight="33.0" prefWidth="159.0" text="Wael Fatah" textFill="WHITE">
                      <font>
                         <Font name="Arial Black" size="14.0" />
                      </font>
                   </Label>
-                  <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="866.0" layoutY="4.0" onMouseClicked="#Deconnexion" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../../../Desktop/logout.png" />
-                     </image>
-                  </ImageView>
                </children>
             </AnchorPane>
          </children>

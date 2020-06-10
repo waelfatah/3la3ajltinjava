@@ -60,10 +60,11 @@ public class LoginController implements Initializable {
     }
 
     @FXML
-    public void login(ActionEvent Event) throws SQLException, IOException, Exception {
+    public void login(ActionEvent Event) throws SQLException, IOException {
 
             login();
-            if(Session.getUser().getRoles().contains("ROLE_ADMIN")){
+            System.out.println(Session.getUser().getRoles());
+          //  if(Session.getUser().getRoles().equalsIgnoreCase("admin")){
             Stage stage = (Stage) login.getScene().getWindow();
             stage.close();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/edu/la3ajltin/gui/MainMenu.fxml"));
@@ -72,26 +73,24 @@ public class LoginController implements Initializable {
             stage.setScene(new Scene(root1));
             stage.initStyle(StageStyle.TRANSPARENT);
             stage.show();
-            }else{
-            Stage stage = (Stage) login.getScene().getWindow();
-            stage.close();
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/edu/la3ajltin/gui/MainMenuFront.fxml"));
-            Parent root1 = (Parent) fxmlLoader.load();
-            stage = new Stage();
-            stage.setScene(new Scene(root1));
-            stage.initStyle(StageStyle.TRANSPARENT);
-            stage.show();
-            }
+            //}//else{
+            //Stage stage = (Stage) login.getScene().getWindow();
+//            stage.close();
+//            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/edu/la3ajltin/gui/MainMenuFront.fxml"));
+//            Parent root1 = (Parent) fxmlLoader.load();
+//            stage = new Stage();
+//            stage.setScene(new Scene(root1));
+//            stage.initStyle(StageStyle.TRANSPARENT);
+//            stage.show();
+//            }
 
     }
-    public void login() throws SQLException, Exception{
-        
+    public void login() throws SQLException{
         fos_userService fss = new fos_userService();
 
         if (fss.Authentification(username.getText(), password.getText())) {
-            System.out.println(Session.getCurrentSession());
             System.out.println("EY");
-            isconnected.setText("connecté");
+            isconnected.setText("connectééééééé");
                     } else {
             isconnected.setText("introuvable");
         }

@@ -12,7 +12,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -59,9 +58,7 @@ public class MainMenuController implements Initializable {
     @FXML
     private Button login;
     @FXML
-    private Button gestProduit1;
-    @FXML
-    private Label produit1;
+    private Button events;
 
     /**
      * Initializes the controller class.
@@ -85,29 +82,11 @@ public class MainMenuController implements Initializable {
         }
 
     }
-    
-    
-    @FXML
-    private void LoadGestionUser(ActionEvent event) {
+     @FXML
+    private void LoadGestionEvents(ActionEvent event) {
         try {
-            produit1.setStyle("-fx-background-color : #f26722");
-            fxml = FXMLLoader.load(getClass().getResource("/edu/la3ajltin/gui/Test.fxml"));//YOUR FXML DOC          
-            myInterface.setContent(fxml);
-//            fxml.getScene().setFill(Color.TRANSPARENT);
-//            fxml.getScene().getStylesheets().setAll(gestionassurance.First.class.getResource("/gestionassurance/gui/styles.css").toString());
-        } catch (IOException ex) {
-
-        }
-
-    }
-    
-    
-    
-      @FXML
-    private void LoadGestionBlog(ActionEvent event) {
-        try {
-            blog.setStyle("-fx-background-color : #f26722");
-            fxml = FXMLLoader.load(getClass().getResource("/edu/la3ajltin/gui/Article.fxml"));//YOUR FXML DOC          
+            events.setStyle("-fx-background-color : #f26722");
+            fxml = FXMLLoader.load(getClass().getResource("/edu/la3ajltin/gui/MenuEF.fxml"));//YOUR FXML DOC          
             myInterface.setContent(fxml);
 //            fxml.getScene().setFill(Color.TRANSPARENT);
 //            fxml.getScene().getStylesheets().setAll(gestionassurance.First.class.getResource("/gestionassurance/gui/styles.css").toString());
@@ -160,15 +139,4 @@ public class MainMenuController implements Initializable {
         stage.show();
     }
 
-    
-     @FXML
-    private void Deconnexion(MouseEvent event) throws IOException {
-        Node node;
-        node = (Node) event.getSource();
-        Stage stage = (Stage) node.getScene().getWindow();
-        stage.close();
-        Scene scene = new Scene(FXMLLoader.load(getClass().getResource("/edu/la3ajltin/gui/Session.fxml")));
-        stage.setScene(scene);
-        stage.show();
-    }
 }

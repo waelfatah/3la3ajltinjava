@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="561.0" prefWidth="1221.0" style="-fx-background-color: #403e3e;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.la3ajltin.gui.MenuEFController">
+   <children>
+      <ScrollPane fx:id="myInterface" prefHeight="571.0" prefWidth="1221.0" style="-fx-background-color: #403e3e;" stylesheets="@mainmenu.css">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="573.0" prefWidth="1230.0" style="-fx-background-color: #403e3e;">
+               <children>
+                  <Label layoutX="167.0" layoutY="33.0" text="Gestion" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="63.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="259.0" layoutY="106.0" text="Formations &amp; Evenements" textFill="#da5a0f">
+                     <font>
+                        <Font name="System Bold" size="48.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="ajoutF" layoutX="130.0" layoutY="282.0" mnemonicParsing="false" onAction="#openAjoutF" prefHeight="46.0" prefWidth="282.0" style="-fx-background-color: white;" text="Ajouter une formation">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="affichF" layoutX="130.0" layoutY="356.0" mnemonicParsing="false" onAction="#openAfficherF" prefHeight="46.0" prefWidth="282.0" style="-fx-background-color: white;" text="Consulter les formations">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ajoutE" layoutX="474.0" layoutY="282.0" mnemonicParsing="false" onAction="#openAjoutE" prefHeight="46.0" prefWidth="282.0" style="-fx-background-color: white;" text="Ajouter un evenement">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="affichE" layoutX="474.0" layoutY="356.0" mnemonicParsing="false" onAction="#openAfficherE" prefHeight="46.0" prefWidth="282.0" style="-fx-background-color: white;" text="Consulter les evenements">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="resv" layoutX="808.0" layoutY="280.0" mnemonicParsing="false" onAction="#openAfficherR" prefHeight="50.0" prefWidth="282.0" style="-fx-background-color: white;" text="Consulter les réservations">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="808.0" layoutY="354.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="282.0" style="-fx-background-color: white;" text="Consulter les statistiques">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+        </content>
+         <styleClass>
+            <String fx:value="viewport" />
+            <String fx:value="track" />
+            <String fx:value="thumb" />
+         </styleClass>
+      </ScrollPane>
+   </children>
+</AnchorPane>

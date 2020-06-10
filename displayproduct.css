@@ -1,0 +1,10 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.table-view .colomn-header .label{
+    -fx-text-fill: white;
+}

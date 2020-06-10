@@ -16,9 +16,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
@@ -58,8 +56,6 @@ public class MainMenuFrontController implements Initializable {
     @FXML
     private HBox entretienBox;
     @FXML
-    private Label entretienLabel;
-    @FXML
     private HBox marquesBox;
     @FXML
     private Label marquesLabel;
@@ -89,6 +85,13 @@ public class MainMenuFrontController implements Initializable {
     private Label prenom;
     @FXML
     private Label nom;
+    @FXML
+    private Button event;
+    @FXML
+    private Label evenementsLabel;
+    @FXML
+    private Button evenements;
+    
 
     /**
      * Initializes the controller class.
@@ -130,17 +133,6 @@ public class MainMenuFrontController implements Initializable {
     @FXML
     private void closeWindow(MouseEvent event) {
         System.exit(0);
-    }
-    
-     @FXML
-    private void Deconnexion(MouseEvent event) throws IOException {
-        Node node;
-        node = (Node) event.getSource();
-        Stage stage = (Stage) node.getScene().getWindow();
-        stage.close();
-        Scene scene = new Scene(FXMLLoader.load(getClass().getResource("/edu/la3ajltin/gui/Session.fxml")));
-        stage.setScene(scene);
-        stage.show();
     }
 
     @FXML
@@ -185,24 +177,6 @@ public class MainMenuFrontController implements Initializable {
         }
 
     }
-    
-   @FXML
-    private void LoadProfil(ActionEvent event) {
-        try {
-            enaWin.setText("Acceuil - Profil");
-            enaWinKbir.setText("Mon profil");
-            accessLabel.setStyle("-fx-background-color : transparent");
-            veloLabel.setStyle("-fx-background-color : #3b3b3c");
-            fxml = FXMLLoader.load(getClass().getResource("/edu/la3ajltin/gui/Profil.fxml"));//YOUR FXML DOC          
-            myInterface.setContent(fxml);
-//            fxml.getScene().setFill(Color.TRANSPARENT);
-//            fxml.getScene().getStylesheets().setAll(gestionassurance.First.class.getResource("/gestionassurance/gui/styles.css").toString());
-        } catch (IOException ex) {
-
-        }
-
-    }
-       
 
     @FXML
     private void LoadGestionAccessoires(ActionEvent event) {
@@ -212,23 +186,6 @@ public class MainMenuFrontController implements Initializable {
             veloLabel.setStyle("-fx-background-color : transparent");
             accessLabel.setStyle("-fx-background-color : #3b3b3c");
             fxml = FXMLLoader.load(getClass().getResource("/edu/la3ajltin/gui/ListAccessoireCell.fxml"));//YOUR FXML DOC          
-            myInterface.setContent(fxml);
-//            fxml.getScene().setFill(Color.TRANSPARENT);
-//            fxml.getScene().getStylesheets().setAll(gestionassurance.First.class.getResource("/gestionassurance/gui/styles.css").toString());
-        } catch (IOException ex) {
-
-        }
-
-    }
-    
-    @FXML
-    private void LoadGestionArticle(ActionEvent event) {
-        try {
-            
-           
-            veloLabel.setStyle("-fx-background-color : transparent");
-            accessLabel.setStyle("-fx-background-color : #3b3b3c");
-            fxml = FXMLLoader.load(getClass().getResource("/edu/la3ajltin/gui/Accueil.fxml"));//YOUR FXML DOC          
             myInterface.setContent(fxml);
 //            fxml.getScene().setFill(Color.TRANSPARENT);
 //            fxml.getScene().getStylesheets().setAll(gestionassurance.First.class.getResource("/gestionassurance/gui/styles.css").toString());
@@ -263,5 +220,37 @@ public class MainMenuFrontController implements Initializable {
 //            fxml.getScene().getStylesheets().setAll(gestionassurance.First.class.getResource("/gestionassurance/gui/styles.css").toString());
         } catch (IOException ex) {
         }        
+    }
+    @FXML
+    private void LoadGestionFormation(ActionEvent event) {
+        try {
+            enaWin.setText("Acceuil - Formations");
+            enaWinKbir.setText("Formations");
+            //accessLabel.setStyle("-fx-background-color : transparent");
+            eventsLabel.setStyle("-fx-background-color : #3b3b3c");
+            fxml = FXMLLoader.load(getClass().getResource("/edu/la3ajltin/gui/ListFormationsCell.fxml"));//YOUR FXML DOC          
+            myInterface.setContent(fxml);
+//            fxml.getScene().setFill(Color.TRANSPARENT);
+//            fxml.getScene().getStylesheets().setAll(gestionassurance.First.class.getResource("/gestionassurance/gui/styles.css").toString());
+        } catch (IOException ex) {
+
+        }
+
+    }
+     @FXML
+    private void LoadGestionEvent(ActionEvent event) {
+        try {
+            enaWin.setText("Acceuil - Formations");
+            enaWinKbir.setText("Formations");
+            //accessLabel.setStyle("-fx-background-color : transparent");
+            evenementsLabel.setStyle("-fx-background-color : #3b3b3c");
+            fxml = FXMLLoader.load(getClass().getResource("/edu/la3ajltin/gui/ListEventsCell.fxml"));//YOUR FXML DOC          
+            myInterface.setContent(fxml);
+//            fxml.getScene().setFill(Color.TRANSPARENT);
+//            fxml.getScene().getStylesheets().setAll(gestionassurance.First.class.getResource("/gestionassurance/gui/styles.css").toString());
+        } catch (IOException ex) {
+
+        }
+
     }
 }

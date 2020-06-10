@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="gridPane" prefHeight="197.0" prefWidth="1065.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="52.0" layoutY="33.0" prefHeight="56.0" prefWidth="71.0" text="ID :" textFill="#f26722">
+         <font>
+            <Font name="Arial" size="27.0" />
+         </font>
+      </Label>
+      <Label fx:id="idCommande" layoutX="110.0" layoutY="41.0" prefHeight="42.0" prefWidth="98.0" text="Label">
+         <font>
+            <Font name="Arial" size="27.0" />
+         </font>
+      </Label>
+      <Hyperlink fx:id="details" layoutX="877.0" layoutY="154.0" onMouseClicked="#details" text="Plus de détails">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Hyperlink>
+      <Label layoutX="367.0" layoutY="33.0" prefHeight="56.0" prefWidth="166.0" text="Prix Total :" textFill="#f26722">
+         <font>
+            <Font name="Arial" size="27.0" />
+         </font>
+      </Label>
+      <Label fx:id="prixTotal" layoutX="520.0" layoutY="41.0" prefHeight="42.0" prefWidth="98.0" text="Label">
+         <font>
+            <Font name="Arial" size="27.0" />
+         </font>
+      </Label>
+      <Separator layoutX="284.0" layoutY="23.0" orientation="VERTICAL" prefHeight="149.0" prefWidth="1.0" />
+      <Separator layoutX="741.0" layoutY="23.0" orientation="VERTICAL" prefHeight="149.0" prefWidth="1.0" />
+      <Label layoutX="770.0" layoutY="34.0" prefHeight="56.0" prefWidth="98.0" text="Date :" textFill="#f26722">
+         <font>
+            <Font name="Arial" size="27.0" />
+         </font>
+      </Label>
+      <Label fx:id="date" layoutX="848.0" layoutY="40.0" prefHeight="42.0" prefWidth="190.0" text="Label">
+         <font>
+            <Font name="Arial" size="27.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

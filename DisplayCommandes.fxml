@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="525.0" prefWidth="1070.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.la3ajltin.tests.DisplayCommandesController">
+   <children>
+      <ListView fx:id="List" layoutX="376.0" layoutY="14.0" prefHeight="525.0" prefWidth="1070.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+   </children>
+</AnchorPane>

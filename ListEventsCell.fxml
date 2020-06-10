@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="525.0" prefWidth="1170.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.la3ajltin.gui.ListEventsCellController">
+   <children>
+      <ListView fx:id="List" editable="true" layoutX="40.0" layoutY="57.0" prefHeight="468.0" prefWidth="1170.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="57.0" />
+      <AnchorPane layoutX="-1.0" prefHeight="58.0" prefWidth="1191.0" style="-fx-background-color: #f26722;">
+         <children>
+            <TextField fx:id="search" layoutX="14.0" layoutY="12.0" onKeyReleased="#Search" prefHeight="35.0" prefWidth="544.0" promptText="Recherche.." />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

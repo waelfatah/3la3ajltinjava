@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="gridPane" prefHeight="241.0" prefWidth="1055.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Separator layoutX="214.0" layoutY="19.0" orientation="VERTICAL" prefHeight="195.0" prefWidth="0.0" />
+      <Label fx:id="nomProduit" layoutX="230.0" layoutY="34.0" prefHeight="49.0" prefWidth="228.0" text="Nom Formation" textFill="#3b3b3c">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Label fx:id="description" layoutX="230.0" layoutY="83.0" prefHeight="40.0" prefWidth="182.0" text="Description" textFill="#f26722">
+         <font>
+            <Font name="Arial" size="28.0" />
+         </font>
+      </Label>
+      <Label fx:id="quantite" layoutX="230.0" layoutY="154.0" prefHeight="40.0" prefWidth="297.0" text="Capacité">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font></Label>
+      <Label fx:id="date" layoutX="817.0" layoutY="65.0" prefHeight="40.0" prefWidth="182.0" text="Date" textAlignment="RIGHT" textFill="RED">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="buyButton" layoutX="780.0" layoutY="126.0" mnemonicParsing="false" onAction="#addProductToCart" onMouseEntered="#changeColorBuy" onMouseExited="#remainColorBuy" prefHeight="55.0" prefWidth="219.0" style="-fx-background-color: #3b3b3c;" text="Reserver" textAlignment="RIGHT" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="43.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/discount.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label fx:id="adresse" layoutX="230.0" layoutY="194.0" prefHeight="40.0" prefWidth="297.0" text="Adresse">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="urlImage" fitHeight="195.0" fitWidth="191.0" layoutX="15.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>
